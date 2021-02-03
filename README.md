@@ -23,12 +23,16 @@ The scheduling for the camera uses Android's internal "alarm" mechanism so
 the device can sleep between shots.
 
 ## Screenshots
-1|2|3|4
 
-![](http://www.survey7.com/cameraupload/shots/Screenshot_2016-07-28-19-22-17.png) | ![](http://www.survey7.com/cameraupload/shots/Screenshot_2016-07-28-19-22-28.png) | ![](http://www.survey7.com/cameraupload/shots/Screenshot_2016-07-28-19-22-49.png) | ![](http://www.survey7.com/cameraupload/shots/Screenshot_2016-07-28-19-22-53.png)
-
-5|6|7
-![](http://www.survey7.com/cameraupload/shots/Screenshot_2016-07-28-19-22-58.png) | ![](http://www.survey7.com/cameraupload/shots/Screenshot_2016-07-28-19-23-04.png) | ![](http://www.survey7.com/cameraupload/shots/Screenshot_2016-07-28-19-23-28.png)
+<p float="left">
+	<img src="http://www.survey7.com/cameraupload/shots/Screenshot_2016-07-28-19-22-17.png" width="100" />
+	<img src="http://www.survey7.com/cameraupload/shots/Screenshot_2016-07-28-19-22-28.png" width="100" />
+	<img src="http://www.survey7.com/cameraupload/shots/Screenshot_2016-07-28-19-22-49.png" width="100" />
+	<img src="http://www.survey7.com/cameraupload/shots/Screenshot_2016-07-28-19-22-53.png" width="100" />
+	<img src="http://www.survey7.com/cameraupload/shots/Screenshot_2016-07-28-19-22-58.png" width="100" />
+	<img src="http://www.survey7.com/cameraupload/shots/Screenshot_2016-07-28-19-23-04.png" width="100" />
+	<img src="http://www.survey7.com/cameraupload/shots/Screenshot_2016-07-28-19-23-28.png" width="100" />
+</p>
 
 
 ## Uses
