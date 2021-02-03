@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string name="app_name">Timelapse Camera</string>
+ <string-array name="camerachoices_array">
+  <item>Default camera</item>
+  <item>Front camera</item>
+  <item>Both</item>
+ </string-array>
+ <string-array name="repeatchoices_array">
+  <item>Run once and stop</item>
+  <item>Once a minute</item>
+  <item>Every 5 minutes</item>
+  <item>Every 10 minutes</item>
+  <item>Every 15 minutes</item>
+  <item>Every 20 minutes</item>
+  <item>Every 30 minutes</item>
+  <item>Once an hour</item>
+  <item>Every two hours</item>
+  <item>Every four hours</item>
+  <item>Every eight hours</item>
+  <item>Every twelve hours</item>
+  <item>Once a day</item>
+ </string-array>
+ <string-array name="maxpixelchoices_front_array">
+  <item>Front camera at maximum resolution</item>
+  <item>800 x 600</item>
+  <item>1280 x 960</item>
+  <item>1600 x 1200</item>
+  <item>2048 x 1536</item>
+  <item>2560 x 1920</item>
+  <item>3264 x 2448</item>
+  <item>4000 x 3000</item>
+ </string-array>
+ <string-array name="maxpixelchoices_main_array">
+  <item>Main camera at maximum resolution</item>
+  <item>800 x 600</item>
+  <item>1280 x 960</item>
+  <item>1600 x 1200</item>
+  <item>2048 x 1536</item>
+  <item>2560 x 1920</item>
+  <item>3264 x 2448</item>
+  <item>4000 x 3000</item>
+ </string-array>
+</resources>

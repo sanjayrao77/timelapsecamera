@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.survey7.cameraupload_full"
+  android:versionCode="19"
+  android:versionName="1.2.4">
+ <supports-screens android:anyDensity="true" android:xlargeScreens="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true" />
+ <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="19" />
+ <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+ <uses-permission android:name="android.permission.WAKE_LOCK" />
+ <uses-permission android:name="android.permission.CAMERA" />
+ <uses-feature android:name="android.hardware.camera" />
+ <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+
+
+
+ <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+ <uses-permission android:name="android.permission.INTERNET" />
+ <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+ <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+ <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+ <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+ <application android:name=".globalcontainer" android:label="@string/app_name" android:icon="@drawable/icon" android:largeHeap="true">
+  <service android:name=".DriveListener" android:exported="true" >
+   <intent-filter>
+    <action android:name="com.google.android.gms.drive.events.HANDLE_EVENT" />
+   </intent-filter>
+  </service>
+  <receiver android:name=".Alarmreceiver" >
+  </receiver>
+  <activity android:name="Main" android:configChanges="orientation|keyboardHidden|screenSize" android:label="@string/app_name">
+   <intent-filter>
+    <action android:name="android.intent.action.MAIN" />
+    <category android:name="android.intent.category.LAUNCHER" />
+   </intent-filter>
+  </activity>
+  <activity android:name="Waiting" android:configChanges="orientation|keyboardHidden|screenSize" android:label="@string/app_name"
+    android:launchMode="singleTask" />
+  <activity android:name="Takeshots" android:excludeFromRecents="true" android:configChanges="orientation|keyboardHidden|screenSize" android:label="@string/app_name" />
+  <activity android:name="HttpUpload" android:excludeFromRecents="true" android:configChanges="orientation|keyboardHidden|screenSize" android:label="@string/app_name" />
+  <activity android:name="Turnoff" android:excludeFromRecents="true" android:configChanges="orientation|keyboardHidden|screenSize" android:label="@string/app_name" />
+  <activity android:name="DriveUpload" android:excludeFromRecents="true" android:configChanges="orientation|keyboardHidden|screenSize" android:label="@string/app_name" />
+  <activity android:name="StorageUpload" android:excludeFromRecents="true" android:configChanges="orientation|keyboardHidden|screenSize" android:label="@string/app_name" />
+  <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+
+  <receiver android:name=".Darclass" android:permission="android.permission.BIND_DEVICE_ADMIN">
+   <meta-data android:name="android.app.device_admin" android:resource="@xml/my_admin" />
+   <intent-filter>
+    <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+   </intent-filter>
+  </receiver>
+
+ </application>
+</manifest>

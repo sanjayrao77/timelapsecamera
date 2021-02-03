@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  >
+ <LinearLayout
+   android:orientation="vertical"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   >
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="0px"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    >
+
+
+
+   <requestFocus />
+  </LinearLayout>
+  <TextView android:layout_width="fill_parent"
+   android:textSize="0.25in"
+   android:text="Options"
+   android:layout_height="wrap_content"
+  />
+  <Spinner android:id="@+id/whichcamera_spinner"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:drawSelectorOnTop="true"
+   android:entries="@array/camerachoices_array"
+  />
+  <Spinner android:id="@+id/whatrepeat_spinner"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:drawSelectorOnTop="true"
+   android:entries="@array/repeatchoices_array"
+  />
+  <Spinner android:id="@+id/maxpixels_main_spinner"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:drawSelectorOnTop="true"
+   android:entries="@array/maxpixelchoices_main_array"
+  />
+  <Spinner android:id="@+id/maxpixels_front_spinner"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:drawSelectorOnTop="true"
+   android:entries="@array/maxpixelchoices_front_array"
+  />
+
+  <Button android:id="@+id/start_btn" android:textSize="0.15in" android:text="Start" android:layout_height="wrap_content"
+    android:layout_marginLeft="0.5in"
+    android:layout_marginRight="0.5in"
+    android:layout_marginTop="0.15in"
+    android:layout_marginBottom="0.15in"
+    android:layout_width="fill_parent" >
+  </Button>
+
+  <CheckedTextView android:layout_width="fill_parent" android:clickable="true" android:focusable="true"
+    android:layout_height="wrap_content" android:id="@+id/uploadpost_checkedtext"
+
+
+
+    android:textColor="@android:color/primary_text_dark" android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+    android:text="Upload with HTTP(S) POST, requires URL" />
+
+  <LinearLayout android:id="@+id/httpoptions_linearlayout"
+    android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+   <TextView android:layout_width="fill_parent" android:text="HTTP or HTTPS URL to POST jpeg data"
+     android:layout_marginLeft="0.15in"
+     android:textColor="@android:color/primary_text_dark" android:layout_height="wrap_content" />
+   <EditText android:id="@+id/url_edittext" android:text="url"
+     android:imeOptions="actionDone"
+     android:singleLine="true"
+     android:inputType="textNoSuggestions"
+     android:layout_marginLeft="0.3in"
+     android:layout_height="wrap_content" android:layout_width="fill_parent" />
+
+   <TextView android:layout_width="fill_parent" android:text="Basic Authorization, user:password"
+     android:layout_marginLeft="0.15in"
+     android:textColor="@android:color/primary_text_dark" android:layout_height="wrap_content" />
+   <EditText android:id="@+id/authorization_edittext" android:text="authorization"
+     android:imeOptions="actionDone"
+     android:singleLine="true"
+     android:inputType="textNoSuggestions"
+     android:layout_marginLeft="0.3in"
+     android:layout_height="wrap_content" android:layout_width="fill_parent" />
+  </LinearLayout>
+
+
+  <CheckedTextView android:layout_width="fill_parent" android:clickable="true" android:focusable="true"
+    android:layout_height="wrap_content" android:id="@+id/uploaddrive_checkedtext"
+    android:textColor="@android:color/primary_text_dark" android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+    android:text="Upload to Google Drive, requires Play Services and linked account" />
+  <LinearLayout android:id="@+id/driveoptions_linearlayout"
+    android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+   <TextView android:layout_width="fill_parent" android:text="Folder name to save in"
+     android:layout_marginLeft="0.15in"
+     android:textColor="@android:color/primary_text_dark" android:layout_height="wrap_content" />
+   <EditText android:id="@+id/foldername_edittext" android:text="foldername"
+     android:imeOptions="actionDone"
+     android:singleLine="true"
+     android:inputType="textNoSuggestions"
+     android:layout_marginLeft="0.3in"
+     android:layout_height="wrap_content" android:layout_width="fill_parent" />
+   <TextView android:layout_width="fill_parent" android:text="Keep this many old files, 0 means keep all"
+     android:layout_marginLeft="0.15in"
+     android:textColor="@android:color/primary_text_dark" android:layout_height="wrap_content" />
+   <EditText android:id="@+id/trimnumber_edittext" android:text="0"
+     android:imeOptions="actionDone"
+     android:singleLine="true"
+     android:digits="0123456789" android:inputType="numberDecimal"
+     android:layout_marginLeft="0.3in"
+     android:layout_height="wrap_content" android:layout_width="fill_parent" />
+   <CheckedTextView android:layout_width="fill_parent" android:clickable="true" android:focusable="true"
+     android:layout_marginLeft="0.15in"
+     android:layout_height="wrap_content" android:id="@+id/deletetrash_checkedtext"
+     android:textColor="@android:color/primary_text_dark" android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+     android:text="Delete oldest files instead of sending them to trash" />
+   <CheckedTextView android:layout_width="fill_parent" android:clickable="true" android:focusable="true"
+     android:layout_marginLeft="0.15in"
+     android:layout_height="wrap_content" android:id="@+id/waitforcomplete_checkedtext"
+     android:textColor="@android:color/primary_text_dark" android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+     android:text="Finish upload before sleeping" />
+   <TextView android:layout_width="fill_parent" android:text="Identifier to place in filenames (optional)"
+     android:layout_marginLeft="0.15in"
+     android:textColor="@android:color/primary_text_dark" android:layout_height="wrap_content" />
+   <EditText android:id="@+id/cameraname_edittext" android:text="cameraname"
+     android:imeOptions="actionDone"
+     android:singleLine="true"
+     android:inputType="textNoSuggestions"
+     android:layout_marginLeft="0.3in"
+     android:layout_height="wrap_content" android:layout_width="fill_parent" />
+  </LinearLayout>
+
+  <CheckedTextView android:layout_width="fill_parent" android:clickable="true" android:focusable="true"
+    android:layout_height="wrap_content" android:id="@+id/uploadstorage_checkedtext"
+    android:textColor="@android:color/primary_text_dark" android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+    android:text="Save jpeg file to local device" />
+  <LinearLayout android:id="@+id/storageoptions_linearlayout"
+    android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" >
+
+
+
+
+
+
+
+  </LinearLayout>
+
+  <CheckedTextView android:layout_width="fill_parent" android:clickable="true" android:focusable="true"
+
+
+
+    android:layout_height="wrap_content" android:id="@+id/waitforwifi_checkedtext"
+    android:textColor="@android:color/primary_text_dark" android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+    android:text="Wait for wifi connection before uploading" />
+
+  <CheckedTextView android:layout_width="fill_parent" android:clickable="true" android:focusable="true"
+
+
+
+    android:layout_height="wrap_content" android:id="@+id/autostartwifi_checkedtext"
+    android:textColor="@android:color/primary_text_dark" android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+    android:text="Start wifi before upload" />
+
+  <CheckedTextView android:layout_width="fill_parent" android:clickable="true" android:focusable="true"
+
+
+
+    android:layout_height="wrap_content" android:id="@+id/autostopwifi_checkedtext"
+    android:textColor="@android:color/primary_text_dark" android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+    android:text="Stop wifi after upload" />
+
+  <CheckedTextView android:layout_width="fill_parent" android:clickable="true" android:focusable="true"
+    android:layout_height="wrap_content" android:id="@+id/fullscreen_checkedtext"
+    android:textColor="@android:color/primary_text_dark" android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+    android:text="Keep screen on to prevent sleeping" />
+
+  <CheckedTextView android:layout_width="fill_parent" android:clickable="true" android:focusable="true"
+
+
+
+    android:layout_height="wrap_content" android:id="@+id/dimscreen_checkedtext"
+    android:textColor="@android:color/primary_text_dark" android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+    android:text="Lower screen brightness to save power" />
+
+  <CheckedTextView android:layout_width="fill_parent" android:clickable="true" android:focusable="true"
+
+
+
+    android:layout_height="wrap_content" android:id="@+id/turnoff_checkedtext"
+    android:textColor="@android:color/primary_text_dark" android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+
+
+
+    android:text="Turn off screen to save power.\nWarning: this will request admin privileges and may add a step to uninstalling." />
+
+  <CheckedTextView android:layout_width="fill_parent" android:clickable="true" android:focusable="true"
+    android:layout_height="wrap_content" android:id="@+id/forceflash_checkedtext"
+    android:textColor="@android:color/primary_text_dark" android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+    android:text="Always use flash LED during focus period" />
+
+  <TextView android:layout_width="fill_parent" android:text="Seconds to wait before first shot (default: 1)"
+
+
+
+    android:textColor="@android:color/primary_text_dark" android:layout_height="wrap_content" />
+  <EditText android:id="@+id/initialdelay_edittext" android:text="initialdelay"
+
+
+
+    android:imeOptions="actionDone"
+    android:singleLine="true"
+    android:digits="0123456789" android:inputType="numberDecimal"
+    android:layout_marginLeft="0.15in"
+    android:layout_height="wrap_content" android:layout_width="fill_parent" />
+
+  <TextView android:layout_width="fill_parent" android:text="Milliseconds to wait for focus (default: 2000)"
+    android:textColor="@android:color/primary_text_dark" android:layout_height="wrap_content" />
+  <EditText android:id="@+id/focustime_edittext" android:text="focustime"
+    android:imeOptions="actionDone"
+    android:singleLine="true"
+    android:digits="0123456789" android:inputType="numberDecimal"
+    android:layout_marginLeft="0.15in"
+    android:layout_height="wrap_content" android:layout_width="fill_parent" />
+
+  <CheckedTextView android:layout_width="fill_parent" android:clickable="true" android:focusable="true"
+    android:layout_height="wrap_content" android:id="@+id/autostart_checkedtext"
+    android:textColor="@android:color/primary_text_dark" android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+    android:text="Start automatically on launch. This is useful for scripting." />
+
+  <Button android:id="@+id/save_btn" android:textSize="0.15in" android:text="Save Options" android:layout_height="wrap_content"
+    android:layout_marginLeft="0.5in"
+    android:layout_marginRight="0.5in"
+    android:layout_marginTop="0.15in"
+    android:layout_marginBottom="0.15in"
+    android:layout_width="fill_parent" >
+  </Button>
+
+  <TextView android:layout_width="fill_parent"
+   android:textSize="0.25in"
+   android:text="Privacy Policy"
+   android:layout_height="wrap_content"
+  />
+  <TextView android:layout_width="fill_parent" android:text="No data are collected by this app, nor are any used or shared. This app is open source and licensed by the GPLv3. Please see the free source code for more information. http://survey7.com/cameraupload/releases/"
+     android:layout_marginLeft="0.15in"
+     android:textColor="@android:color/primary_text_dark" android:layout_height="wrap_content" />
+
+ </LinearLayout>
+</ScrollView>
