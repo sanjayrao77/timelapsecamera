@@ -2,7 +2,7 @@
 # Timelapse Camera GPL, Android App
 
 ## Purpose
-	Timelapse Camera lets you use an old Android phone or tablet as a networked
+Timelapse Camera lets you use an old Android phone or tablet as a networked
 timelapse camera. It can use the front, rear, or both cameras with specified
 resolutions. It can upload photos to Google Drive or via HTTP(S) POST. It can
 also save the photos to local storage. You can have it take a photo every
@@ -134,7 +134,7 @@ Android version 2.3 or higher is required. This includes everything after 2011.
 Google Play Services must be installed on the device to use the Google Drive features.
 
 
-### BUILDING WITHOUT GOOGLE DRIVE LIBRARIES
+### Building without google drive libraries
 
 You'll need to remove the "com.google.android.gms.version" line from
 AndroidManifest.xml, as the value comes from Google's "gms-version.xml".
@@ -145,7 +145,7 @@ logcat. You could prevent crashes by forcing "uploaddrive=false" in
 Globals.java and/or removing the settings from options.xml.
 
 
-### BUILDING WITH GOOGLE DRIVE SUPPORT
+### Building with google drive support
 
 This requires a Google Play Services library. I've used r28 without a problem.
 Google Play Services itself may require a support library. With r28,
